@@ -42,6 +42,40 @@
         cours = new Course[3];
     }
 ```
+2.
+```
+//学生选课；
+    public boolean addCourse(Course course){
+        boolean flag=false;
+        if(!isSelectedCourse(course)&&isNullCourse(course)){
+            for(int i=0;i<this.courses.length;i++){
+                if(courses[i]==null){
+                    courses[i]=course;
+                    course.addStudent(this);//课程也要添加学生
+                    flag=true;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+    //学生移除课程
+    public boolean removeCourse(Course course){
+        boolean flag=false;
+        if(isSelectedCourse(course)){
+            for(int i=0;i<this.courses.length;i++){
+                if(courses[i]==course){
+                    courses[i]=null;
+                    course.removeStudent(this);//在课程中移除学生
+                    flag=true;
+                    break;
+                }
+            }
+
+        }
+        return flag;
+    }
+```
 ## 实验结果：
 
 ![images](https://github.com/tan-weijia/Java2/blob/main/images/yunxingjieguo.png)
