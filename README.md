@@ -14,6 +14,8 @@
 再创建Student类，包含学号、姓名、专业、性别和所选课程，而Student类也作为Person类的子类继承了编号、姓名和性别三个属性，；再创建Course类，包含编号、课程名称和授课教师；最后再创建SelectCourse类
 ，通过toString()方法完成对象的输出。
 流程图：
+![images](https://github.com/tan-weijia/Java2/blob/main/images/liuchengtu.png)
 核心代码：
 实验结果：
+![images](https://github.com/tan-weijia/Java2/blob/main/images/liuchengtu.png)
 实验感想：
