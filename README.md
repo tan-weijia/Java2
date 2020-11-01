@@ -12,28 +12,44 @@
 ```
 ## 实验要求：
 ```
-+1.编写上述实体类以及测试主类（注意类之间继承关系的适用）；
-+2.在测试主类中，实例化多个类实体，模拟学生选课操作、打印课程信息（信息包括：编号、课程名称、上课地点、时间、授课教师 等）；模拟学生退课操作，再打印课程信息。
+1.编写上述实体类以及测试主类（注意类之间继承关系的适用）；
+2.在测试主类中，实例化多个类实体，模拟学生选课操作、打印课程信息（信息包括：编号、课程名称、上课地点、时间、授课教师 等）；
+模拟学生退课操作，再打印课程信息。
 ```
 ## 实验过程：
 ```
-首先创建Person类，包含编号、姓名、性别三个属性；然后创建Teacher类，包含编号、姓名、性别和所教课程，其中Teacher类作为Person类的子类继承了编号、姓名和性别三个属性，添加对象；
-再创建Student类，包含学号、姓名、专业、性别和所选课程，而Student类也作为Person类的子类继承了编号、姓名和性别三个属性，添加对象；再创建Course类，包含编号、课程名称和授课教师，添加对象；最后再创建SelectCourse类，通过toString()方法完成对象的输出。
+首先创建Person类，包含编号、姓名、性别三个属性；
+然后创建Teacher类，包含编号、姓名、性别和所教课程，其中Teacher类作为Person类的子类继承了编号、姓名和性别三个属性，添加对象；
+再创建Student类，包含学号、姓名、专业、性别和所选课程，而Student类也作为Person类的子类继承了编号、姓名和性别三个属性，添加对象；
+再创建Course类，包含编号、课程名称和授课教师，添加对象；
+最后再创建SelectCourse类，通过toString()方法完成对象的输出。
 ```
 ## 流程图：
-```
 ![images](https://github.com/tan-weijia/Java2/blob/main/images/liuchengtu.png)
-```
 ## 核心代码：
+1.
 ```
+//构造函数
+    public Teacher() {
+        super();
+        cours= new Course[3];
+    }
+    public Teacher(int id,String teacherName,String sex){
+        this.id = id;
+        this.teacherName = teacherName;
+        this.sex = sex;
+        //this.course = course;
+        cours = new Course[3];
+    }
 ```
 ## 实验结果：
-```
+
 ![images](https://github.com/tan-weijia/Java2/blob/main/images/yunxingjieguo.png)
-```
+
 ## 实验感想：
 ```
-在本次实验中，我学习到了类的继承用法，学会使用super()，来实例化子类，还有使用toString（）方法,输出对象信息。但在程序编写上仍存在很多困难，希望老师可以多讲解一些程序编写的问题。
+在本次实验中，我学习到了类的继承用法，学会使用super()，来实例化子类，还有使用toString（）方法,输出对象信息。
+但在程序编写上仍存在很多困难，希望老师可以多讲解一些程序编写的问题。
 ```
 
 
