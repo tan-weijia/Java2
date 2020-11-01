@@ -29,17 +29,16 @@
 ## 核心代码：
 1.
 ```
+public class Teacher extends Person{
+	private int id;
+    private String teacherName;
+    private String sex;
+    private String course;
+    private Course[] cours;
 //构造函数
     public Teacher() {
         super();
         cours= new Course[3];
-    }
-    public Teacher(int id,String teacherName,String sex){
-        this.id = id;
-        this.teacherName = teacherName;
-        this.sex = sex;
-        //this.course = course;
-        cours = new Course[3];
     }
 ```
 2.
@@ -72,6 +71,34 @@
                 }
             }
 
+        }
+        return flag;
+    }
+```
+3.
+```
+//子方法1：学生是否选过这门课
+    public boolean isSelectedStudent(Student stu){
+        boolean flag=false;
+        for(Student s:students){//只能用于检查，不能修改
+            if(s==stu){
+                flag=true;
+                break;
+            }
+        }
+        return flag;
+    }
+```
+4.
+```
+//子方法2：学科学生未达到限定人数吗
+    public boolean isNullStudent(Student stu){
+        boolean flag=false;
+        for(Student s:students){
+            if(s==null){//还有空位
+                flag=true;
+                break;
+            }
         }
         return flag;
     }
