@@ -41,7 +41,7 @@ public class Teacher extends Person{
         cours= new Course[3];
     }
 ```
-2.
+2.模拟学生选课/退课操作
 ```
 //学生选课；
     public boolean addCourse(Course course){
@@ -75,7 +75,7 @@ public class Teacher extends Person{
         return flag;
     }
 ```
-3.
+3.子方法
 ```
 //子方法1：学生是否选过这门课
     public boolean isSelectedStudent(Student stu){
@@ -89,18 +89,17 @@ public class Teacher extends Person{
         return flag;
     }
 ```
-4.
+4.super()方法
 ```
-//子方法2：学科学生未达到限定人数吗
-    public boolean isNullStudent(Student stu){
-        boolean flag=false;
-        for(Student s:students){
-            if(s==null){//还有空位
-                flag=true;
-                break;
-            }
-        }
-        return flag;
+//构造函数
+    public Course(int courseId,String courseName,float credit,Teacher teacher) {
+        super();
+        this.courseId=courseId;
+        this.courseName=courseName;
+        this.credit=credit;
+        this.setTeacher(teacher);
+        students = new Student[30];
+        teachers = new Teacher[1];
     }
 ```
 5.toString()方法
