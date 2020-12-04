@@ -27,7 +27,7 @@
 ## 流程图：
 ![images](https://github.com/tan-weijia/Java2/blob/main/images/liuchengtu.png)
 ## 核心代码：
-1.
+1.类的继承
 ```
 public class Teacher extends Person{
 	private int id;
@@ -103,7 +103,7 @@ public class Teacher extends Person{
         return flag;
     }
 ```
-5.
+5.toString()方法
 ```
 public static void main(String[] args) {
 		
